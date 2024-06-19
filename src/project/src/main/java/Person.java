@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Person {
@@ -126,7 +127,10 @@ public class Person {
         this.Siblings.add(sibling);
     }
 
-    public void getGrandChildren() {
+    public List<Person> getGrandChildren() {
+        //need to fix
+        List<Person> grandChildren = new ArrayList<>();
 
+        return grandChildren;
     }
 }
