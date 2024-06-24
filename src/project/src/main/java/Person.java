@@ -116,6 +116,7 @@ public class Person {
     }
 
     public void addChild(Person child) {
+        this.children = new ArrayList<>();
         this.children.add(child);
     }
 
