@@ -9,9 +9,9 @@ public class Person {
     private int age;
     private Person mother;
     private Person father;
-    private List<Person> Siblings;
-    private List<Person> Children;
-    private List<Pet> Pets;
+    private List<Person> siblings;
+    private List<Person> children;
+    private List<Pet> pets;
 
     public Person(String name, String lastName, int age, String sex) {
         this.name = name;
@@ -85,27 +85,27 @@ public class Person {
     }
 
     public List<Person> getSiblings() {
-        return Siblings;
+        return siblings;
     }
 
     public void setSiblings(List<Person> siblings) {
-        Siblings = siblings;
+        this.siblings = siblings;
     }
 
     public List<Person> getChildren() {
-        return Children;
+        return children;
     }
 
     public void setChildren(List<Person> children) {
-        Children = children;
+        this.children = children;
     }
 
     public List<Pet> getPets() {
-        return Pets;
+        return pets;
     }
 
     public void setPets(List<Pet> pets) {
-        Pets = pets;
+        this.pets = pets;
     }
 
 
@@ -116,15 +116,18 @@ public class Person {
     }
 
     public void addChild(Person child) {
-        this.Children.add(child);
+        this.children.add(child);
     }
 
-    public void addPet(Pet pet) {
-        this.Pets.add(pet);
+    public void addPet(Pet pet,Person owner) {
+        pet.setOwner(owner);
+
+        this.pets = new ArrayList<>();
+        this.pets.add(pet);
     }
 
     public void addSibling(Person sibling) {
-        this.Siblings.add(sibling);
+        this.siblings.add(sibling);
     }
 
     public List<Person> getGrandChildren() {

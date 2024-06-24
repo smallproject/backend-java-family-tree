@@ -9,9 +9,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class PersonTest {
 
     private Person person;
+    private Pet pet;
     @BeforeEach
     void setUp() {
         person = new Person("Mitchel", "Rose", 36, "Female");
+        pet = new Pet("gunther", 4,"Saint Bernard");
     }
 
     @Test
@@ -360,7 +362,7 @@ class PersonTest {
 
 
         //Act
-        person.addPet(gunther);
+        person.addPet(gunther,person);
 
 
         //Assert
