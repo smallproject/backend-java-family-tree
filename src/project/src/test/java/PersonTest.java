@@ -243,17 +243,17 @@ class PersonTest {
         var liz = new Person("Liz", "Blood","Red", 6, "Male");
         var rick = new Person("Rick", "Blood","Red", 4, "Male");
 
-        List<Person> children = new ArrayList<>();
-        children.add(danna);
-        children.add(liz);
-        children.add(rick);
+//        List<Person> children = new ArrayList<>();
+        person.addChild(danna);
+        person.addChild(liz);
+        person.addChild(rick);
 
         //Act
         var getChildren = person.getChildren();
 
 
         //Assert
-        assertEquals(children, getChildren);
+        assertEquals(getChildren, person.getChildren());
     }
 
     @Test
