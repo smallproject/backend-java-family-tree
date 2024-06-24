@@ -133,11 +133,9 @@ public class Person {
     }
 
     public List<Person> getGrandChildren() {
-        //need to fix
         List<Person> grandChildren = new ArrayList<>();
 
         for (Person child : this.children) {
-//            grandChildren.addAll(child.getGrandChildren());
             for (Person grandchild : child.children) {
                 grandChildren.add(grandchild);
             }

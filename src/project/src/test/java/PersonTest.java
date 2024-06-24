@@ -243,7 +243,6 @@ class PersonTest {
         var liz = new Person("Liz", "Blood","Red", 6, "Male");
         var rick = new Person("Rick", "Blood","Red", 4, "Male");
 
-//        List<Person> children = new ArrayList<>();
         person.addChild(danna);
         person.addChild(liz);
         person.addChild(rick);
@@ -339,7 +338,6 @@ class PersonTest {
 
     @Test
     void addChild() {
-        //need to fix
         //Arrange
         var person = new Person("Martin", "Blood","Red", 36, "Male");
         var child = new Person("Lisa", "Blood","Red", 9, "Female");
@@ -355,7 +353,6 @@ class PersonTest {
 
     @Test
     void addPet() {
-        //need to fix
         //Arrange
         var person = new Person("Martin", "Blood","Red", 36, "Male");
         var gunther = new Pet("gunther", 4,"Saint Bernard");
@@ -371,7 +368,6 @@ class PersonTest {
 
     @Test
     void addSibling() {
-        //need to fix
         //Arrange
         var person = new Person("Martin", "Blood","Red", 36, "Male");
         var sibling = new Person("Mark", "Blood","Red", 39, "Male");
@@ -387,7 +383,6 @@ class PersonTest {
 
     @Test
     void getGrandChildren() {
-        //need to fix
         //Arrange
         var person = new Person("Martin", "Blood","Red", 64, "Male");
         var child = new Person("Betty", "Blood","Red", 39, "Female");;
