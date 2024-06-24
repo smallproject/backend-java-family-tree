@@ -128,6 +128,7 @@ public class Person {
     }
 
     public void addSibling(Person sibling) {
+        this.siblings = new ArrayList<>();
         this.siblings.add(sibling);
     }
 
