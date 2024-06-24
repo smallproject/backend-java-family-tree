@@ -389,15 +389,17 @@ class PersonTest {
     void getGrandChildren() {
         //need to fix
         //Arrange
-        var person = new Person("Martin", "Blood","Red", 36, "Male");
-        var sibling = new Person("Mark", "Blood","Red", 39, "Male");
-
+        var person = new Person("Martin", "Blood","Red", 64, "Male");
+        var child = new Person("Betty", "Blood","Red", 39, "Female");;
+        var grandchild = new Person("Mark", "Blood","Red", 9, "Male");
+        child.addChild(grandchild);
+        person.addChild(child);
 
         //Act
         var grandChildren = person.getGrandChildren();
 
 
         //Assert
-        assertEquals(grandChildren, person.getSiblings().size());
+        assertEquals(grandChildren, person.getGrandChildren());
     }
 }
